@@ -1,3 +1,4 @@
+'''
 name = dict
 
 phone number = list
@@ -5,27 +6,26 @@ phone number = list
 email = list
 
 date of birth = dict
+'''
 
 def new_contact(contact_list):
-    all_name = []
     all_phone = []
     all_email = []
-    all_DOB = []
     contact = {}
-    contact['name'] = input("Enter name: ")
-    contact['DOB'] = int(input("Enter: DOB")
+    contact["name"] = input("Enter name: ")
+    contact["DOB"] = int(input("Enter: DOB")
 
     phone = input("Enter phone number: ")
-    all_phone.apprehend(phone)
+    all_phone.append(phone)
     contact["Phone number(s)"] = all_phone
 
     email = input("Enter email: ")
-    all_email.apprehend(email)
+    all_email.append(email)
     contact["Email(s)"] = all_email
     contact_list.append(contact)
 
 def remove_contact(contact_list):
-        view_contacts(contact_list)
+        view_contact(contact_list)
         remove = int(input("Which contact would you like to delete? "))
         if 0 < remove <= len(contact_list):
             del contact_list[remove=1]
@@ -34,25 +34,16 @@ def remove_contact(contact_list):
             print("error.")
 
 
-def view_contacts(contact_lists):
+def view_contact(contact_list):
     if len(contact_list) == 0:
-        print("No contacts!!!")
+        print("No contacts")
     else:
         for i in range(len(contact_list)):
             print(i+1, contact_list[i])
 
 
 
-
-
-
-
-
-
-
-
-
-ef main():
+def main():
     contact_list = []
     while True:
         choice = int(input("What would you like to do? \n "
@@ -69,3 +60,4 @@ ef main():
         if choice == 3:
             contact_list_functions.view_contact(contact_list)
 main()
+
