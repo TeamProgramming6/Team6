@@ -15,13 +15,13 @@ def initiate_contactbook():
 
             # Using a temp variable to assign the details to the contact
             if j == 0:
-                temp.append(str(input("Enter name*: ")))
+                temp.append(str(input("Enter name (First, Last) *: ")))
                 if temp[j] == '' or temp[j] == ' ':
                     sys.exit(
                         "No name was entered. Shutting down...")
 
             if j == 1:
-                temp.append(int(input("Enter number*: ")))
+                temp.append(int(input("Enter phone number (000000000) *: ")))
                 # Contact book will automatically shut down if no number is entered.
 
             if j == 2:
@@ -198,7 +198,7 @@ def display_all(cb):
 
 
 def closecontactbook():
-    # A simple gesture of courtesy towards the user to enhance user experience
+    # A simple gesture of courtesy towards user to improve user experience
     sys.exit("Goodbye!")
 
 
